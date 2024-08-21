@@ -1,0 +1,772 @@
+html,
+body,
+form,
+div,
+p,
+ul,
+ol,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+option,
+strong,
+span,
+em,
+dl,
+dd,
+dt,
+table,
+th,
+td,
+tr,
+img,
+video {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BookkMyungjo-Bd';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@keyframes textflow1{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+@keyframes textflow2{
+    from{
+        transform: translateX(-50%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    font-family: Pretendard-Regular;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000;
+    background: url(../images/bg_space.png) no-repeat top center;
+}
+#wrap{
+    position: relative;
+    height: 100%;
+}
+#header {
+    margin: 20px 0;
+}
+
+.inner_header {
+    width: 1120px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    display: inline-block;
+}
+
+.inner_header ul {
+    display: flex;
+    color: #fff;
+    font-family: 'BookkMyungjo-Bd';
+    font-weight: lighter;
+    margin-top: 30px;
+}
+
+.inner_header ul li a {
+    border: 1px solid #fff;
+    border-radius: 50px;
+    padding: 6px 15px;
+    margin-left: 20px;
+}
+.inner_header ul li a:hover{
+    background-color: #fff;
+    color: #000;
+}
+/* tablet -> 1121 */
+@media (max-width: 1321px) {
+    #wrap {
+        width: 100%;
+    }
+
+    .inner_header ul {
+        display: none;
+    }
+
+    .inner_header {
+        width: 100%;
+        justify-content: center;
+    }
+}
+.textflow {
+    overflow: hidden;
+    padding: 200px 0 100px;
+}
+
+.main_textflow {
+    white-space: nowrap;
+    animation: textflow1 3s infinite linear;
+}
+/* banner */
+.banner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: -520px;
+    padding-bottom: 100px;
+}
+.swiper{
+    width: 600px;
+    height: 600px;
+}
+.swiper-slide{
+    position: relative;
+    box-shadow: 0 15px 30px rgb(0, 0, 0, 0.5);
+}
+.swiper-slide:nth-child(1){
+    background: url(../images/main_banner1.jpg) no-repeat;
+    background-size: cover;
+}
+.swiper-slide:nth-child(2){
+    background: url(../images/main_banner2.jpg) no-repeat;
+    background-size: cover;
+}
+.swiper-slide:nth-child(3){
+    background: url(../images/main_banner3.jpg) no-repeat;
+    background-size: cover;
+}
+/* tablet -> 1121 */
+@media (max-width: 1321px) {
+    .swiper{
+        width: 430px;
+        height: 430px;
+    }
+    .textflow {
+        padding: 200px 0 100px;
+    }
+    .banner{
+        margin-top: -500px;
+    }
+}
+/* mobile -> 700 */
+/* @media (max-width: 700px) {
+    .swiper{
+        width: 300px;
+        height: 300px;
+    }
+} */
+.banner_text_wrap{
+    width: 1320px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+}
+.banner_text{
+    color: #fff;
+    text-align: end;
+    position: absolute;
+    top: 630px;
+    right: 15%;
+    z-index: 9;
+}
+h4{
+    font-family: 'BookkMyungjo-Bd';
+    font-size: 30px;
+    line-height: 1.3em;
+}
+/* tablet -> 1121 */
+@media (max-width: 1321px) {
+    .banner_text{
+        position: absolute;
+        top: 483px;
+        right: 10%;
+    }
+    h4{
+        font-size: 1em;
+        line-height: 1.3em;
+    }
+    .banner_text p{
+        font-size: 12px;
+        line-height: 1.5em;
+    }
+}
+/* mobile -> 700 */
+@media (max-width: 700px) {
+    .banner_text{
+        position: absolute;
+        top: 580px;
+        left: 10%;
+        text-align: start;
+    }
+}
+/* section1 */
+#section1, #section2{
+    overflow: hidden;
+}
+.title_wrap{
+    overflow: hidden;
+}
+h3{
+    width: 1320px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-family: 'BookkMyungjo-Bd';
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    white-space: nowrap;
+}
+#section1 ul{
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+}
+#section1 ul li{
+    flex: 1 1 auto;
+    width: 100%;
+}
+#section1 ul li:nth-child(2){
+    margin: 0 20px;
+}
+h5{
+    font-size: 25px;
+    font-family: 'BookkMyungjo-Bd';
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+#section1 img{
+    cursor: pointer;
+}
+.best_img_wrap{
+    overflow: hidden;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.best_img_wrap img{
+    width: 100%;
+    display: block;
+    transition: transform 0.5s;
+}
+.best_img_wrap:hover img{
+    transform: scale(1.1);
+}
+.best_text{
+    cursor: pointer;
+}
+/* tablet -> 1121 */
+@media (max-width: 1321px) {
+    /* #section1{
+        width: 100%;
+    } */
+    h3{
+        width: 90%;
+    }
+    #section1 ul{
+        width: 90%;
+    }
+    #section1 ul li{
+        flex: 1 1 auto;
+        width: 30%;
+    }
+    #section1 p{
+        font-size: 12px;
+        line-height: 1.3em;
+    }
+    h5{
+        font-size: 20px;
+    }
+}
+/* mobile -> 700 */
+@media (max-width: 700px) {
+    #section1 ul{
+        flex-wrap: wrap;
+    }
+    #section1 ul li{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;   
+    }
+    #section1 ul li:nth-child(2){
+        margin: 0;
+    }
+    .best_img_wrap{
+        width: 50%;
+        margin-right: 10px;
+    }
+    .best_text{
+        overflow: hidden;
+        width: 40%;
+        text-align: end;
+    }
+}
+/* section2 */
+.section2_wrap{
+    width: 1320px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.slogan{
+    width: 100%;
+    font-family: 'BookkMyungjo-Bd';
+    font-size: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 50px 0;
+}
+.content1{
+    overflow: hidden;
+    position: relative;
+}
+.content1-1{
+    display: flex;
+    justify-content: space-between;
+}
+.about_img1{
+    width: 40%;
+    margin-bottom: 30px;
+}
+.about_text_bg1{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 80px;
+    font-family: 'BookkMyungjo-Bd';
+    margin-top: 20px;
+    color: #ddd;
+}
+.since{
+    position: absolute;
+    top: 62%;
+    left: 40%;
+    font-size: 25px;
+    font-weight: bold;
+}
+.title1{
+    font-size: 25px;
+    font-family: 'BookkMyungjo-Bd';
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.about_img2{
+    position: absolute;
+    top: 14%;
+    right: 20.6%;
+}
+.about_img3{
+    position: absolute;
+    top: 40%;
+    right: 0%;
+}
+.content2{
+    overflow: hidden;
+    margin-top: 30px;
+}
+.content2 ul{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.about_text_bg2, .about_text_bg3{
+    font-size: 80px;
+    font-family: 'BookkMyungjo-Bd';
+    color: #ddd;
+    margin-top: 20px;
+}
+.about_text_bg3{
+    position: absolute;
+    bottom: 6%;
+    left: 15%;
+}
+.about_text_box2 p{
+    margin-bottom: 20px;
+}
+.about_img4{
+    position: absolute;
+    top: 36%;
+    left: 0%;
+}
+.about_img5{
+    position: absolute;
+    top: 0;
+    left: 37.1%;
+}
+.since2{
+    display: none;
+}
+/* tablet -> 1321 */
+@media (max-width: 1321px) {
+    .section2_wrap{
+        width: 90%;
+        font-size: 80%;
+    }
+    .slogan{
+        font-size: 5cqmin;
+    }
+    .about_text_bg1, .about_text_bg2, .about_text_bg3, .about_img_wrap, .about_img4, .about_img5{
+        display: none;
+    }
+    .about_img1 img{
+        width: 300px;
+    }
+    .content1{
+        text-align: end;
+        display: flex;
+        justify-content: space-between;
+    }
+    .since{
+        position: absolute;
+        top: 80%;
+        left: 310px;
+        font-size: 20px;
+    }
+    .content2 ul{
+        display: block;
+    }
+    .content2 ul li:nth-child(2){
+        display: flex;
+        justify-content: space-between;
+    }
+    .about_img6 img{
+        width: 400px;
+    }
+}
+/* mobile -> 700 */
+@media (max-width: 700px) {
+    .slogan{
+        display: block;
+        font-size: 40px;
+        line-height: 1.2em;
+    }
+    .slogan li:nth-child(2){
+        margin-left: 30%;
+    }
+    .slogan li:nth-child(3){
+        margin-left: 40%;
+    }
+    .content1, .content2 ul li:nth-child(2){
+        display: block;
+    }
+    .content1-1{
+        display: block;
+    }
+    .about_img1{
+        width: 100%;
+    }
+    .about_img1, .about_img6{
+        text-align: center;
+    }
+    .about_img6 img{
+        width: 250px;
+        margin-top: 20px;
+    }
+    .since{
+        display: none;
+    }
+    .about_text_box{
+        margin-top: 30px;
+    }
+    .since2{
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+/* textflow2 */
+#text_flow, #text_flow2{
+    font-family: 'BookkMyungjo-Bd';
+}
+#text_flow2{
+    margin-top: 10px;
+}
+.animated{
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 10px 0;
+    overflow: hidden;
+}
+.track{
+    font-weight: bold;
+    white-space: nowrap;
+    display: flex;   
+}
+.track p{
+    font-size: 25px;
+    padding: 0 10px;
+}
+.left{
+    animation: textflow1 6s infinite linear;
+}
+.right{
+    animation: textflow2 6s infinite linear;
+}
+/* mobile -> 700 */
+@media (max-width: 700px) {
+    #text_flow2{
+        display: none;
+    }
+}
+/* section3 */
+#section3{
+    width: 1120px;
+    margin: 0px auto;
+    margin-top: 100px;
+}
+.made{
+    font-family: 'BookkMyungjo-Bd';
+    font-size: 80px;
+    text-align: center;
+}
+.made_sub{
+    margin: 40px 0 50px 0;
+    text-align: center;
+
+}
+#section3 ul{
+    display: flex;
+    justify-content: space-between;
+}
+.made_img_wrap{
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+}
+.made_img_wrap img{
+    width: 100%;
+    display: block;
+    transition: transform 0.5s;
+}
+.made_img_wrap:hover img{
+    transform: scale(1.1);
+}
+.made_product{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 0 20px 0;
+}
+/* tablet -> 1321 */
+@media (max-width: 1321px) {
+    #section3{
+        width: 80%;
+    }
+    .made{
+        font-size: 50px;
+    }
+    .made_sub{
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    #section3 ul li:nth-child(2){
+        margin: 0 20px;
+    }
+    #section3 ul p{
+        font-size: 10px;
+        line-height: 1.3em;
+    }
+    .made_product{
+        font-size: 16px;
+    }
+}
+/* mobile -> 700 */
+@media (max-width: 700px) {
+    #section3 ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #section3 ul li:nth-child(2){
+        margin: 0;
+    }
+    #section3{
+        align-items: center;
+    }
+    #section3 img{
+        width: 100%;
+    }
+    #section3 ul p{
+        font-size: 100%;
+    }
+    .made_sub{
+        font-size: 12px;
+    }
+    .made_text{
+        margin-bottom: 50px;
+        font-weight: lighter;
+    }
+}
+/* section4 */
+#section4{
+    margin: 0 auto;
+}
+.box1{
+    display: flex;
+    justify-content: center;
+    font-family: 'BookkMyungjo-Bd';
+    font-size: 25px;
+    color: #ddd;
+    margin-bottom: 50px;
+}
+.box1 li{
+    margin: 0 10px;
+}
+.box1 li a:hover{
+    color: #000;
+}
+.opacity2 {
+    color: #000;
+}
+.box1_1{
+    width: 1320px;
+    margin: 0 auto;
+}
+.box1_1 ul{
+    display: flex;
+    justify-content: space-between;
+}
+.box1_1 ul li{
+    width: 24%;
+}
+.product_text_box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.product_text_box p{
+    cursor: pointer;
+}
+.product_text_box div{
+    cursor: pointer;
+}
+span{
+    color: #ddd;
+}
+.product_img_wrap{
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.product_img_wrap img{
+    width: 100%;
+    display: block;
+    transition: transform 0.5s;
+}
+.product_img_wrap:hover img{
+    transform: scale(1.1);
+}
+
+/* tablet -> 1321 */
+@media (max-width: 1321px) {
+    #section4 ul{
+        margin-bottom: 50px;
+    }
+    .box1_1{
+        width: 100%;
+    }
+    .box1_1 ul{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .box1_1 p{
+        font-size: 12px;
+        line-height: 1.3em;
+    }
+}
+/* mobile -> 700 */
+@media (max-width: 700px) {
+    .box1_1 ul{
+        flex-wrap: wrap;
+    }
+    .box1_1 ul li{
+        width: 48%;
+        margin-top: 20px;
+    }
+    .box1{
+        font-size: 16px;
+        margin: 0 auto;
+    }
+}
+/* footer */
+#footer{
+    background: url(../images/bg_footer.jpg);
+    border-top: 2px solid #000;
+    color: #fff;
+    margin-top: 100px;
+    height: 613px;
+}
+.inner_footer{
+    text-align: center;
+    padding: 100px 0;
+    font-size: 14px;
+}
+.util{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.util li:nth-child(1)::after{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    background-color: #fff;
+    margin: 0 20px;
+    vertical-align: -1px;
+}
+.util li:nth-child(2)::after{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    background-color: #fff;
+    margin: 0 20px;
+    vertical-align: -1px;
+}
+.sns{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.sns li{
+    margin: 0 10px;
+}
+.sns li img{
+    cursor: pointer;
+}
